@@ -131,7 +131,7 @@ const doctorDashboard = async (req, res) => {
 
         let patients = []
 
-        appointments.map(() => {
+        appointments.map((item) => {
             if (!patients.includes(item.userId)) {
                 patients.push(item.userId)
             }
@@ -182,6 +182,8 @@ const updateDoctorProfile = async (req, res) => {
 }
 
 
+
+
 export {
     changeAvailability, doctorList,
     loginDoctor, appointmentsDoctor,
@@ -190,3 +192,4 @@ export {
     doctorProfile,
     updateDoctorProfile
 }
+
